@@ -133,7 +133,7 @@ export default function Pdp() {
               <span>{qty}</span>
               <button onClick={() => setQty((q) => q + 1)} aria-label="Increase">+</button>
             </div>
-            <span className="pqty__stock">{product.stock} in stock · ships from Toronto</span>
+            <span className="pqty__stock">{product.total - product.sold} in stock · ships from Toronto</span>
           </div>
 
           <div className="pacts">
