@@ -15,12 +15,12 @@ export default function Home() {
         <LsHero />
         <TrustStrip />
         <LsDeals />
+        <Reveal><BrandRow /></Reveal>
         <Reveal><CategoryTiles /></Reveal>
         <LsBestSelling />
         <Reveal><ShopBySeries /></Reveal>
         <Reveal><CtaBanner /></Reveal>
         <LsNewArrivals />
-        <Reveal><BrandRow /></Reveal>
         <Reveal><Testimonials /></Reveal>
         <Reveal><WhyShop /></Reveal>
       </main>

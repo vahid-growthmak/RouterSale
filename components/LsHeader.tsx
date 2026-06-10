@@ -22,7 +22,7 @@ export default function LsHeader() {
     <>
       <div className="lbar">
         <div className="container lbar__in">
-          <span className="lbar__msg">Free shipping across <b>US &amp; Canada</b> on orders over $500</span>
+          <span className="lbar__msg">Free shipping across the <b>US &amp; Canada</b> · Refurbished Cisco specialists since 2002</span>
           <div className="lbar__right">
             <a className="hide-sm" href="#">Track order</a>
             <a className="hide-sm" href="#">Help</a>

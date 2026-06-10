@@ -73,4 +73,16 @@ export const TABS = [
 ];
 
 export const BRANDS = ['Cisco', 'Juniper', 'Fortinet', 'HP', 'Dell', 'Netgear', 'Avaya'];
+
+// Manufacturer logos for the "brands we carry" row (real brands RouterSale resells).
+export const BRAND_LOGOS = [
+  { name: 'Cisco', slug: 'cisco' },
+  { name: 'Juniper Networks', slug: 'junipernetworks' },
+  { name: 'Fortinet', slug: 'fortinet' },
+  { name: 'Netgear', slug: 'netgear' },
+  { name: 'HP', slug: 'hp' },
+  { name: 'Dell', slug: 'dell' },
+  { name: 'Lenovo', slug: 'lenovo' },
+];
+
 export const USD_TO_CAD = 1.37;

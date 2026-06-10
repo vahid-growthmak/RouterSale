@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { DEPARTMENTS, BRANDS } from '@/lib/products';
+import { DEPARTMENTS, BRAND_LOGOS } from '@/lib/products';
 import { ICONS } from './Icons';
 import {
   IconTruck, IconShield, IconRepeat, IconHeadset, IconArrow, IconStar, IconCheck,
@@ -11,9 +11,9 @@ import {
 /* ---------------------------------------------------------------- TRUST STRIP */
 export function TrustStrip() {
   const items = [
-    { i: <IconTruck />, t: 'Free shipping', s: 'US & Canada over $500' },
-    { i: <IconShield />, t: '6-month warranty', s: 'Genuine, tested gear' },
-    { i: <IconRepeat />, t: 'Buy · Sell · Trade', s: 'Cash for your old gear' },
+    { i: <IconTruck />, t: 'Free shipping', s: 'Across the US & Canada' },
+    { i: <IconBolt />, t: 'Lowest price', s: 'Guaranteed worldwide' },
+    { i: <IconShield />, t: 'Full warranty', s: 'Genuine, tested gear' },
     { i: <IconHeadset />, t: '24/7 support', s: 'Cisco-certified techs' },
   ];
   return (
@@ -97,7 +97,12 @@ export function BrandRow() {
   return (
     <div className="section container" style={{ paddingBlock: 0 }}>
       <div className="lbrands">
-        {BRANDS.map((b) => <span key={b}>{b}</span>)}
+        <span className="lbrands__lbl">Brands we buy &amp; sell</span>
+        <div className="lbrands__logos">
+          {BRAND_LOGOS.map((b) => (
+            <img key={b.slug} src={`/brands/${b.slug}.svg`} alt={b.name} title={b.name} className="lbrands__logo" loading="lazy" />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -181,9 +186,9 @@ export function LsFooter() {
         <div>
           <h4>Services</h4>
           <ul>
-            <li><a href="#trade">Sell / Trade-in</a></li><li><a href="#">Study Kits</a></li>
-            <li><a href="#">Device Repair</a></li><li><a href="#">Refurbishment</a></li>
-            <li><a href="#">CCIE Lab Gear</a></li>
+            <li><a href="#trade">Sell / Trade-in</a></li><li><a href="#">Cisco Device Repair</a></li>
+            <li><a href="#">Computer &amp; Laptop Repair</a></li><li><a href="#">Refurbishment &amp; Testing</a></li>
+            <li><a href="#">Cisco Study Kits</a></li>
           </ul>
         </div>
         <div>

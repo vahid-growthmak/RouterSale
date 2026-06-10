@@ -7,9 +7,6 @@ import { IconCart, IconClose, IconTruck, IconCheck, IconShield } from './Icons';
 export default function MiniCart() {
   const { open, setOpen, lines, count, subtotal, fmt, setQty, remove, lastAdded } = useStore();
 
-  const FREE_SHIP = 500; // USD threshold
-  const toFree = Math.max(0, FREE_SHIP - subtotal);
-
   return (
     <>
       <div className="cart-scrim" data-open={open} onClick={() => setOpen(false)} aria-hidden={!open} />
@@ -49,15 +46,15 @@ export default function MiniCart() {
         {lines.length > 0 && (
           <div className="cart__foot">
             <div className="cart__ship">
-              {toFree > 0 ? <IconTruck /> : <IconCheck />}
-              {toFree > 0 ? <span>Add <b>{fmt(toFree)}</b> for free Canada/US shipping</span> : <span><b>Free shipping unlocked</b> — ships from Toronto</span>}
+              <IconCheck />
+              <span><b>Free shipping included</b> — ships from Toronto across US &amp; Canada</span>
             </div>
             <div className="cart__sub">
               <span className="l">Subtotal</span>
               <span className="v">{fmt(subtotal)}</span>
             </div>
-            <button className="btn btn--accent btn--block">Checkout securely</button>
-            <p className="cart__note"><IconShield style={{ width: 13, display: 'inline', verticalAlign: '-2px' }} /> 6-month warranty · USD/CAD at checkout · Tested before it ships</p>
+            <button className="btn btn--blue btn--block">Checkout securely</button>
+            <p className="cart__note"><IconShield style={{ width: 13, display: 'inline', verticalAlign: '-2px' }} /> Full warranty · USD/CAD at checkout · Tested before it ships</p>
           </div>
         )}
       </aside>

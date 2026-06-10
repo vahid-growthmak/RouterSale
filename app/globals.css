@@ -3,12 +3,12 @@
    (Lighting-Souq-style structure · RouterSale brand: blue primary + orange deals)
    ============================================================ */
 :root {
-  --blue: #1B8DCB;
-  --blue-d: #1573A6;
-  --blue-deep: #0E3A5C;
-  --navy: #10283B;
-  --orange: #E8772E;
-  --orange-d: #CF6322;
+  --blue: #2A44AE;
+  --blue-d: #203488;
+  --blue-deep: #232159;
+  --navy: #19173F;
+  --orange: #F36C1C;
+  --orange-d: #D85A12;
   --red: #E0413C;
   --green: #1FA463;
   --star: #F6A609;
@@ -56,7 +56,7 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 14px; border: 0; border-radius: var(--r-md); padding: 12px 22px; transition: background .16s var(--ease), color .16s, transform .16s var(--ease), box-shadow .16s; white-space: nowrap; }
 .btn svg { width: 17px; height: 17px; }
 .btn--blue { background: var(--blue); color: #fff; }
-.btn--blue:hover { background: var(--blue-d); transform: translateY(-2px); box-shadow: 0 12px 24px -10px rgba(27,141,203,.6); }
+.btn--blue:hover { background: var(--blue-d); transform: translateY(-2px); box-shadow: 0 12px 24px -10px rgba(42,68,174,.6); }
 .btn--orange { background: var(--orange); color: #fff; }
 .btn--orange:hover { background: var(--orange-d); transform: translateY(-2px); }
 .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.6); }
@@ -127,8 +127,8 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 /* ============================================================ HERO */
 .lhero { padding-block: clamp(20px, 2.5vw, 28px); }
 .lhero__grid { display: grid; grid-template-columns: 1fr 340px; gap: 18px; }
-.lbanner { position: relative; border-radius: var(--r-xl); overflow: hidden; min-height: 420px; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(20px, 3vw, 44px); align-items: center; padding: clamp(28px, 4vw, 52px); color: #fff; background: linear-gradient(115deg, #0E3A5C 0%, #14507e 52%, #1b6da0 100%); isolation: isolate; }
-.lbanner::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 80% at 90% 30%, rgba(232,119,46,.28), transparent 60%); }
+.lbanner { position: relative; border-radius: var(--r-xl); overflow: hidden; min-height: 420px; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(20px, 3vw, 44px); align-items: center; padding: clamp(28px, 4vw, 52px); color: #fff; background: linear-gradient(115deg, #232159 0%, #2a2e7a 52%, #34419c 100%); isolation: isolate; }
+.lbanner::after { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 80% at 90% 30%, rgba(243,108,28,.28), transparent 60%); }
 .lbanner__c { position: relative; z-index: 2; padding-bottom: 16px; }
 .lbanner__tile { position: relative; z-index: 1; background: #fff; border-radius: var(--r-lg); padding: clamp(18px, 2.4vw, 30px); display: grid; place-items: center; aspect-ratio: 5 / 4; box-shadow: 0 26px 54px rgba(0,0,0,.34); }
 .lbanner__tile img { max-width: 100%; max-height: 270px; object-fit: contain; }
@@ -141,8 +141,8 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 .lbanner__dots button[data-active='true'] { background: var(--orange); width: 24px; border-radius: var(--r-full); }
 .lpromos { display: grid; grid-template-rows: 1fr 1fr; gap: 18px; }
 .lpromo { position: relative; border-radius: var(--r-xl); overflow: hidden; padding: 24px; display: flex; flex-direction: column; justify-content: center; min-height: 200px; isolation: isolate; }
-.lpromo.a { background: linear-gradient(135deg, #1b6da0, #2a8fc8); color: #fff; }
-.lpromo.b { background: linear-gradient(135deg, #21303f, #33485e); color: #fff; }
+.lpromo.a { background: linear-gradient(135deg, #2a2e7a, #34419c); color: #fff; }
+.lpromo.b { background: linear-gradient(135deg, #1d1b48, #2b2870); color: #fff; }
 .lpromo small { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
 .lpromo h3 { font-size: 20px; font-weight: 800; margin: 7px 0 0; color: #fff; }
 .lpromo span { color: rgba(255,255,255,.82); font-size: 13px; margin-top: 4px; }
@@ -228,7 +228,7 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 /* ============================================================ SHOP BY SERIES (big image cards) */
 .lspaces { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .lspace { position: relative; border-radius: var(--r-lg); overflow: hidden; min-height: 220px; padding: 22px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; isolation: isolate; }
-.lspace::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(16,40,59,.15), rgba(16,40,59,.82)); }
+.lspace::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(25,23,63,.18), rgba(25,23,63,.85)); }
 .lspace__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--ease); }
 .lspace:hover .lspace__bg { transform: scale(1.06); }
 .lspace small { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #ffd9bf; }
@@ -240,8 +240,8 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 @media (max-width: 480px) { .lspaces { grid-template-columns: 1fr; } }
 
 /* ============================================================ CTA BANNER */
-.lcta { position: relative; border-radius: var(--r-2xl); overflow: hidden; background: linear-gradient(110deg, var(--blue-deep), #1b6da0); color: #fff; padding: clamp(34px, 5vw, 60px); isolation: isolate; }
-.lcta::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 100% at 88% 20%, rgba(232,119,46,.32), transparent 60%); }
+.lcta { position: relative; border-radius: var(--r-2xl); overflow: hidden; background: linear-gradient(110deg, var(--blue-deep), #2a44ae); color: #fff; padding: clamp(34px, 5vw, 60px); isolation: isolate; }
+.lcta::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50% 100% at 88% 20%, rgba(243,108,28,.32), transparent 60%); }
 .lcta__in { max-width: 60%; }
 .lcta small { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #ffd9bf; }
 .lcta h2 { font-size: clamp(26px, 3.6vw, 42px); font-weight: 800; color: #fff; margin: 12px 0; line-height: 1.05; }
@@ -250,9 +250,12 @@ h1, h2, h3, h4 { font-family: var(--font); margin: 0; line-height: 1.15; color: 
 @media (max-width: 760px) { .lcta__in { max-width: 100%; } .lcta__img { display: none; } }
 
 /* ============================================================ BRAND ROW */
-.lbrands { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 28px clamp(20px, 3vw, 40px); background: var(--soft); border-radius: var(--r-lg); }
-.lbrands span { font-weight: 800; font-size: 22px; color: var(--soft-3); letter-spacing: .02em; transition: color .2s; }
-.lbrands span:hover { color: var(--blue); }
+.lbrands { display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; padding: 26px clamp(20px, 3vw, 40px); background: var(--soft); border-radius: var(--r-lg); }
+.lbrands__lbl { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
+.lbrands__logos { display: flex; align-items: center; gap: clamp(26px, 4vw, 54px); flex-wrap: wrap; flex: 1; justify-content: space-around; }
+.lbrands__logo { height: 30px; width: auto; max-width: 116px; object-fit: contain; filter: grayscale(1); opacity: .55; transition: filter .25s var(--ease), opacity .25s var(--ease), transform .25s var(--ease); }
+.lbrands__logo:hover { filter: grayscale(0); opacity: 1; transform: translateY(-2px); }
+@media (max-width: 700px) { .lbrands { flex-direction: column; gap: 18px; } .lbrands__logos { gap: 26px 30px; justify-content: center; } .lbrands__logo { height: 24px; } }
 
 /* ============================================================ TESTIMONIALS */
 .ltest { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
