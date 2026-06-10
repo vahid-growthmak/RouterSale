@@ -93,9 +93,9 @@ export default function Pdp() {
 
         {/* Info */}
         <div className="pinfo">
-          <div className="pinfo__ey">Refurbished · Bench-tested in Toronto</div>
+          <div className="pinfo__ey">Cisco</div>
           <h1 className="pinfo__title">Cisco ASA 5520 Adaptive Security Appliance Firewall</h1>
-          <div className="pinfo__sku">{product.sku}</div>
+          <div className="pinfo__sku">SKU: {product.sku} · Refurbished · Bench-tested in Toronto</div>
           <div className="pinfo__rating">
             <span className="stars">{Array.from({ length: 5 }).map((_, i) => <IconStar key={i} />)}</span>
             <a href="#reviews">({product.reviews} reviews)</a>
@@ -103,7 +103,7 @@ export default function Pdp() {
           <div className="pinfo__price">
             <span className="pinfo__now">{fmt(price)}</span>
             <span className="pinfo__old">{fmt(product.list)}</span>
-            <span className="pinfo__save">Save {off}%</span>
+            <span className="pinfo__save">Save {fmt(product.list - price)}</span>
           </div>
           <p className="pinfo__desc">
             Enterprise-grade VPN firewall, professionally refurbished and bench-tested to factory spec.
@@ -133,7 +133,7 @@ export default function Pdp() {
               <span>{qty}</span>
               <button onClick={() => setQty((q) => q + 1)} aria-label="Increase">+</button>
             </div>
-            <span className="pqty__stock">{product.total - product.sold} in stock · ships from Toronto</span>
+            <span className="pqty__stock">In stock, {product.total - product.sold} units · ships from Toronto</span>
           </div>
 
           <div className="pacts">
