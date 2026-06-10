@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import React, { SVGProps } from 'react';
 
 type P = SVGProps<SVGSVGElement>;
 const base = (p: P) => ({
@@ -35,7 +35,7 @@ export const IconPrinter = (p: P) => (
   <svg {...base(p)}><path d="M7 8V3h10v5" /><rect x="4" y="8" width="16" height="8" rx="1.5" /><path d="M7 14h10v6H7z" /><path d="M17.5 11h.01" /></svg>
 );
 
-export const ICONS: Record<string, (p: P) => JSX.Element> = {
+export const ICONS: Record<string, (p: P) => React.JSX.Element> = {
   router: IconRouter, switch: IconSwitch, shield: IconShield, wifi: IconWifi,
   module: IconModule, phone: IconPhone, power: IconPower, laptop: IconLaptop,
   printer: IconPrinter,
